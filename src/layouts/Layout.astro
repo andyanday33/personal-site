@@ -10,9 +10,14 @@ import Navbar from "../components/Navbar.astro";
     </head>
     <body>
         <Navbar />
-        <article>
-            <slot />
-        </article>
+        <header>
+            <slot name="inside-header"/>
+        </header>
+        <main>
+            <article id="about-summary">
+                <slot />
+            </article>
+        </main>
     </body>
 </html>
 
@@ -20,7 +25,16 @@ import Navbar from "../components/Navbar.astro";
     body {
         font-family: 'Monaco', 'Times New Roman', 'Serif';
     }
-    article {
+    main {
+        display: flex;
+    }
+    article#about-summary {
         border: 1px solid black;
+        margin: 5px;
+        padding: 5px;
+        text-align: right;
+        background-color: #2C3639;
+        margin-left: auto;
+        flex-grow: 1;
     }
 </style>

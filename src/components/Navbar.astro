@@ -2,17 +2,20 @@
 
 ---
 <nav>
-    <a href="">Home</a>
+    <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/projects">Projects</a>
+    <a href="../public/Resume_july_2022.pdf">CV</a>
 </nav>
 
 <style>
     nav {
         justify-content: center;
-        text-align: center;
         padding-bottom: 5px;
         margin-bottom: 5px;
+        display: flex;
+        border-bottom: dashed #2C3639 1px;
+    
     }
     a {
         color: #DCD7C9;
@@ -22,9 +25,9 @@
         font-size: 1.5em;
         margin: 0px 5px;
     }
-    a:active {
-        background-color: #DCD7C9;
-        color: #2C3639;
+    a:last-of-type {
+        position: absolute;
+        right: 10px;
     }
     a:hover {
         background-color: #DCD7C9;
