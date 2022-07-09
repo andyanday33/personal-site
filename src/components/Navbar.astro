@@ -11,19 +11,27 @@
 <style>
     nav {
         justify-content: center;
-        padding-bottom: 1em;
         display: flex;
         border-bottom: solid #DCD7C9 1px;
         background-color: #2C3639;
     }
-    a {
+    nav a {
         color: #DCD7C9;
         text-decoration: none;
-        border-bottom: dashed 1px #DCD7C9;
-        padding: 5px;
+        border-left: dashed 1px #DCD7C9;
+        border-right: dashed 1px #DCD7C9;
+        border-bottom: dashed 1px #2C3639;
+        padding: 1em;
         font-size: 1.5em;
-        margin: 5px 5px;
+        margin: 0px;
         transition: background-color 0.5s;
+    }
+    nav a::after {
+        content:"";
+        border-bottom: 1.5px dashed #2C3639;
+        display: block;
+        position: relative;
+        top: 1.1em;
     }
     a:last-of-type {
         position: absolute;
