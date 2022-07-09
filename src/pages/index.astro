@@ -4,12 +4,13 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
 	<!--TODO: extract this to a jsx component for animated background -->
 	<!--TODO: add responsiveness -->
-	<section slot="inside-header" id="greeting">
-		<p>Hello There! I am</p>
-		<h1>Berke Anday<br><span id="last-name">Baloglu</span></h1>
-		<p>Full-stack developer, MSc Student</p>
-	</section>
-	
+	<header slot="before-main">
+		<section id="greeting">
+			<p>Hello There! I am</p>
+			<h1>Berke Anday<br><span id="last-name">Baloglu</span></h1>
+			<p>Full-stack developer, MSc Student</p>
+		</section>
+	</header>
 	<!--TODO: add linkedin, github images with links here -->
 </Layout>
 
@@ -23,18 +24,33 @@ import Layout from "../layouts/Layout.astro";
 		padding: 2px;
 		margin: auto;
 	}
+	header {
+		box-sizing: border-box;
+        background-image: url('../public/tile_background.png');
+        color: #2C3639;
+        margin: 0px;
+        height: 100%;
+        padding: 4em;
+        border-bottom: dotted 1px #2C3639;
+        transition: padding 1s;
+        display: flex;
+        justify-content: center;
+	}
 	section#greeting {
 		margin: auto;
 		display: grid;
 		width: 40%;
 	}
-	p{
+	section#greeting p{
+		text-shadow: 2px 0 #A27B5C, -2px 0 #A27B5C, 0 2px #A27B5C, 0 -2px #A27B5C,
+               1px 1px #A27B5C, -1px -1px #A27B5C, 1px -1px #A27B5C, -1px 1px #A27B5C;
 		color: #DCD7C9;
 		background-size: cover;
 		padding: 2px;
 		margin: 2px 0;
 		font-size: 1.5em;
 		text-align: center;
+		
 	}
 	span#last-name {
 		color: #3F4E4F;

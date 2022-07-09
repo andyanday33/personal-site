@@ -10,9 +10,7 @@ import Navbar from "../components/Navbar.astro";
     </head>
     <body>
         <Navbar />
-        <header>
-            <slot name="inside-header"/>
-        </header>
+        <slot name="before-main"/>
         <main>
             <article>
                 <slot />
@@ -34,22 +32,6 @@ import Navbar from "../components/Navbar.astro";
     }
     main {
         display: flex;
-    }
-    header {
-        box-sizing: border-box;
-        background-image: url('../public/tile_background.png');
-        color: #2C3639;
-        margin: 0px;
-        height: 100%;
-        padding: 4em;
-        border-bottom: dotted 1px #2C3639;
-        transition: padding 1s;
-        display: flex;
-        justify-content: center;
-    }
-    header:hover {
-        padding: 5em;
-        transition: padding 1s;
     }
     article#about-summary {
         border: 1px solid black;
