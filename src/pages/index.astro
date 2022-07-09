@@ -3,21 +3,41 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
 	<!--TODO: extract this to a jsx component for animated background -->
-	<span slot="inside-header">Hello There! I am</span>
-	<h1 slot="inside-header">Berke Anday Baloglu</h1>
-	<span slot="inside-header">Full-stack developer, MSc Student</span>
+	<!--TODO: add responsiveness -->
+	<section slot="inside-header" id="greeting">
+		<p>Hello There! I am</p>
+		<h1>Berke Anday<br><span id="last-name">Baloglu</span></h1>
+		<p>Full-stack developer, MSc Student</p>
+	</section>
+	
 	<!--TODO: add linkedin, github images with links here -->
 </Layout>
 
 <style>
 	h1 {
-		font-size: 2em;
+		font-size: 4em;
 		background-color: #DCD7C9;
+		color: #A27B5C;
 		max-width: fit-content;
 		padding: 2px;
+		margin: auto;
 	}
-	span {
-		background-color: #DCD7C9;
+	section#greeting {
+		margin: auto;
+		display: grid;
+		width: 40%;
+	}
+	p{
+		color: #DCD7C9;
+		background-size: cover;
 		padding: 2px;
+		margin: 2px 0;
+		font-size: 1.5em;
+		text-align: center;
+	}
+	span#last-name {
+		color: #3F4E4F;
+		padding: 0px;
+		font-size: 1.5em;
 	}
 </style>
