@@ -14,27 +14,37 @@ import Navbar from "../components/Navbar.astro";
             <slot name="inside-header"/>
         </header>
         <main>
-            <article id="about-summary">
+            <article>
                 <slot />
             </article>
         </main>
+        <footer>
+            <slot name="inside-footer"/>
+        </footer>
     </body>
 </html>
 
 <style>
+    html {
+        height: 100%;
+    }
     body {
         font-family: 'Monaco', 'Times New Roman', 'Serif';
+        height: 100%;
     }
     main {
         display: flex;
     }
     header {
-        background-color: #DCD7C9;
-        color: #3F4E4F;
+        box-sizing: border-box;
+        background-image: url('../public/tile_background.png');
+        color: #2C3639;
         margin: 0px;
+        height: 100%;
         padding: 4em;
         border-bottom: dotted 1px #2C3639;
         transition: padding 1s;
+        background-position: ;
     }
     header:hover {
         padding: 5em;

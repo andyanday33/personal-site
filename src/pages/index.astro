@@ -2,16 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
+	<!--TODO: extract this to a jsx component for animated background -->
+	<span slot="inside-header">Hello There! I am</span>
 	<h1 slot="inside-header">Berke Anday Baloglu</h1>
-	<p slot="inside-header">Full-stack developer, MSc Student</p>
+	<span slot="inside-header">Full-stack developer, MSc Student</span>
 	<!--TODO: add linkedin, github images with links here -->
-	<h2>A</h2>
-	<p>B</p>
 </Layout>
 
 <style>
 	h1 {
 		font-size: 2em;
-		color: #3F4E4F;
+		background-color: #DCD7C9;
+		max-width: fit-content;
+		padding: 2px;
+	}
+	span {
+		background-color: #DCD7C9;
+		padding: 2px;
 	}
 </style>
