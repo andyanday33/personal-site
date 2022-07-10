@@ -23,22 +23,23 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
     main {
-        height: 100%;
+        min-height: 100%;
         display: grid;
         grid-template-rows: auto;
         background-color: #DCD7C9;
-        font-size: 1.1em;
+        font-size: calc((.1em + 1vmin) + (.1em + 1vmax));
     }
     h2 {
         text-align: center;
-        color: #3F4E4F;
-        font-size: 2em;
-        border-bottom: 3px dashed #3F4E4F;
+        color: #2C3639;
+        font-size: calc((.2em + 2vmin) + (.2em + 2vmax));
+        border-bottom: 3px dashed #2C3639;
     }
     h3 {
-        color: #2C3639;
+        color: #3F4E4F;
         width: fit-content;
-        border-bottom: 2px dashed #2C3639;
+        border-bottom: 2px dashed #3F4E4F;
+        font-size: calc((.1em + 1vmin) + (.1em + 1vmax));
     }
     section {
         margin: 2em;

@@ -63,7 +63,6 @@ import githubImgReference from '../github.svg';
 
 <style>
     header h1 {
-        font-size: 4rem;
         text-shadow: 2px 0 #DCD7C9, -2px 0 #DCD7C9, 0 2px #DCD7C9, 0 -2px #DCD7C9,
             1px 1px #DCD7C9, -1px -1px #DCD7C9, 1px -1px #DCD7C9, -1px 1px #DCD7C9;
         color: #2C3639;
@@ -71,6 +70,7 @@ import githubImgReference from '../github.svg';
         width: 100%;
         padding: 2px;
         margin: auto;
+        font-size: calc((.4em + 2vmin) + (.4em + 2vmax));
     }
     svg {
         filter: invert(18%) sepia(10%) saturate(858%) hue-rotate(147deg) brightness(88%) contrast(86%) 
@@ -96,7 +96,6 @@ import githubImgReference from '../github.svg';
         z-index : 1000;
     }
     header section#greeting {
-        font-size: 1.1rem;
         margin: auto;
         display: grid;
         width: fit-content;
@@ -108,14 +107,14 @@ import githubImgReference from '../github.svg';
         background-size: cover;
         padding: 2px;
         margin: 2px 0;
-        font-size: 1.5rem;
+        font-size: calc((.1em + 1vmin) + (.1em + 1vmax));
         text-align: center;
 
     }
     header span#last-name {
         color: #A27B5C;
         padding: 0px;
-        font-size: 6rem;
+        font-size: calc((.4em + 3vmin) + (.4em + 3vmax));
         text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
             1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
     }
@@ -125,7 +124,7 @@ import githubImgReference from '../github.svg';
     a#contact-me {
         justify-self: center;
         margin: 0.5em;
-        font-size: 1.5rem;
+        font-size: calc((.2em + 1vmin) + (.2em + 1vmax));
         padding: 1em;
         color: #2C3639;
         background-color: #2C3639;

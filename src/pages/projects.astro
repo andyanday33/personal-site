@@ -87,13 +87,25 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+    @media all and (max-width: 1000px) {
+        .vertical-line {
+            height: 100%;
+            top: 12em;
+        }
+    }
+    @media all and (min-width: 1000px) {
+        .vertical-line {
+            height: 120%;
+            top: 10em;
+        }
+    }
     main {
         min-height: 100%;
         display: grid;
         grid-template-rows: 6em;
         background-color: #DCD7C9;
         overflow: visible;
-        font-size: 1.1em;
+        font-size: calc((.1em + .5vmin) + (.1em + .5vmax));
     }
     a {
         text-decoration: none;
@@ -161,7 +173,7 @@ import Layout from "../layouts/Layout.astro";
         color: #DCD7C9;
         border-top: 3px dashed #3F4E4F;
         border-bottom: 3px dashed #3F4E4F;
-        font-size: 1.3em;
+        font-size: calc((.1em + .75vmin) + (.1em + .75vmax));
         transition: background-color 0.5s;
         transition: font-size 0.5s;
         text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
@@ -173,11 +185,10 @@ import Layout from "../layouts/Layout.astro";
     }
     .vertical-line {
         border-left: 3px dashed #3F4E4F;
-        height: 150%;
         position: absolute;
         left: 50%;
         margin-left: -3px;
-        top: 10em;
         z-index: 0;
     }
+    
 </style>
