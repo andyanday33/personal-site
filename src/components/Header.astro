@@ -1,5 +1,6 @@
 ---
 import ParticleContainer from "./ParticleContainer";
+import githubImgReference from '../github.svg';
 ---
 <header>
     <section id="greeting">
@@ -7,36 +8,98 @@ import ParticleContainer from "./ParticleContainer";
       <h1>Berke Anday<br /><span id="last-name">Baloglu</span></h1>
       <p>Full-stack developer, MSc Student</p>
       <a id="contact-me" href="mailto:berke.andayb@gmail.com">Contact Me!</a>
+      <section id="links">
+        <a href="https://github.com/andyanday33">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"/>
+            </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/berkeanday/">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                <g>
+                    <path d="M17.303,14.365c0.012-0.015,0.023-0.031,0.031-0.048v0.048H17.303z M32,0v32H0V0H32L32,0z M9.925,12.285H5.153v14.354
+                        h4.772V12.285z M10.237,7.847c-0.03-1.41-1.035-2.482-2.668-2.482c-1.631,0-2.698,1.072-2.698,2.482
+                        c0,1.375,1.035,2.479,2.636,2.479h0.031C9.202,10.326,10.237,9.222,10.237,7.847z M27.129,18.408c0-4.408-2.355-6.459-5.494-6.459
+                        c-2.531,0-3.664,1.391-4.301,2.368v-2.032h-4.77c0.061,1.346,0,14.354,0,14.354h4.77v-8.016c0-0.434,0.031-0.855,0.157-1.164
+                        c0.346-0.854,1.132-1.746,2.448-1.746c1.729,0,2.418,1.314,2.418,3.246v7.68h4.771L27.129,18.408L27.129,18.408z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+        </a>
+      </section>
     </section>
     <ParticleContainer client:load/>
 </header>
 
 <style>
     header h1 {
-        font-size: 4em;
+        font-size: 4rem;
         text-shadow: 2px 0 #DCD7C9, -2px 0 #DCD7C9, 0 2px #DCD7C9, 0 -2px #DCD7C9,
             1px 1px #DCD7C9, -1px -1px #DCD7C9, 1px -1px #DCD7C9, -1px 1px #DCD7C9;
         color: #2C3639;
         max-width: fit-content;
+        width: 100%;
         padding: 2px;
         margin: auto;
     }
+    svg {
+        filter: invert(18%) sepia(10%) saturate(858%) hue-rotate(147deg) brightness(88%) contrast(86%) 
+            drop-shadow(0 0 0.75rem #DCD7C9);
+        margin: 0.5em;
+    }
+    svg:hover {
+        filter: invert(94%) sepia(2%) saturate(1036%) hue-rotate(8deg) brightness(84%) contrast(115%) 
+            drop-shadow(0 0 0.75rem #2C3639);
+    }
+    #links {
+        display: flex;
+        justify-self: center;
+    }
     header {
-        box-sizing: border-box;
+        display: flex;
         color: #2C3639;
         margin: 0px;
         height: 100%;
-        padding: 4em;
-        transition: padding 1s;
+        padding: 4rem;
         display: flex;
         justify-content: center;
         z-index : 1000;
     }
     header section#greeting {
-        font-size: 1.1em;
+        font-size: 1.1rem;
         margin: auto;
         display: grid;
-        width: 40%;
+        width: fit-content;
     }
     header section#greeting p{
         text-shadow: 2px 0 #DCD7C9, -2px 0 #DCD7C9, 0 2px #DCD7C9, 0 -2px #DCD7C9,
@@ -45,23 +108,25 @@ import ParticleContainer from "./ParticleContainer";
         background-size: cover;
         padding: 2px;
         margin: 2px 0;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         text-align: center;
 
     }
     header span#last-name {
         color: #A27B5C;
         padding: 0px;
-        font-size: 1.5em;
+        font-size: 6rem;
         text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
             1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
+    }
+    a {
+        text-decoration: none;
     }
     a#contact-me {
         justify-self: center;
         margin: 0.5em;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         padding: 1em;
-        text-decoration: none;
         color: #2C3639;
         background-color: #2C3639;
         border: 1px solid #2C3639;
