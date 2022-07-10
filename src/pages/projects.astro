@@ -78,6 +78,7 @@ import Layout from "../layouts/Layout.astro";
         grid-template-rows: 6em;
         background-color: #DCD7C9;
         overflow: visible;
+        font-size: 1.1em;
     }
     h2 {
         justify-self: center;
@@ -93,6 +94,7 @@ import Layout from "../layouts/Layout.astro";
         align-items: center;
         min-height: 100%;
         max-width: 100%;
+        padding-bottom: 5%;
     }
     section.time-indicator {
         flex-shrink: 0;
@@ -134,13 +136,18 @@ import Layout from "../layouts/Layout.astro";
         border-top: 3px dashed #DCD7C9;
         border-bottom: 3px dashed #DCD7C9;
         transition: background-color 0.5s;
+        transition: font-size 0.5s;
     }
     section.project:hover {
-        background-color: #DCD7C9;
-        color: #3F4E4F;
+        background-color: #A27B5C;
+        color: #DCD7C9;
         border-top: 3px dashed #3F4E4F;
         border-bottom: 3px dashed #3F4E4F;
+        font-size: 1.3em;
         transition: background-color 0.5s;
+        transition: font-size 0.5s;
+        text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
+            1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
     }
     ul {
         list-style: none;
@@ -148,7 +155,7 @@ import Layout from "../layouts/Layout.astro";
     }
     .vertical-line {
         border-left: 3px dashed #3F4E4F;
-        height: 95%;
+        height: 120%;
         position: absolute;
         left: 50%;
         margin-left: -3px;
