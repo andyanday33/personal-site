@@ -4,8 +4,30 @@ import Layout from "../layouts/Layout.astro";
 
 ---
 <Layout>
-    <h2>Projects</h2>
-    <section id="project-1-puzzlaffic">
-    
-    </section>
+    <main>
+        <h2>Projects</h2>
+        <section id="project-1-puzzlaffic">
+            <h3>Puzzlaffic</h3>
+            <ul>
+                <li>A coding game created using Typescript React</li>
+            </ul>
+        </section>
+    </main>
 </Layout>
+
+<style>
+    main {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 6em;
+    }
+    section#project-1-puzzlaffic {
+        justify-self: right;
+        text-align: right;
+        border: 1px solid black;
+        height: fit-content;
+        width: 50%;
+        padding: 1em;
+        margin: 0.5em;
+    }
+</style>

@@ -11,12 +11,7 @@ import Footer from "../components/Footer.astro";
     </head>
     <body>
         <Navbar />
-        <slot name="before-main"/>
-        <main>
-            <article>
-                <slot />
-            </article>
-        </main>
+        <slot/>
         <Footer />
     </body>
 </html>
@@ -31,7 +26,7 @@ import Footer from "../components/Footer.astro";
         margin: 0px;
     }
     main {
-        display: flex;
+        height: 100%;
     }
     article#about-summary {
         border: 1px solid black;
