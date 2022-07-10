@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -16,9 +17,7 @@ import Navbar from "../components/Navbar.astro";
                 <slot />
             </article>
         </main>
-        <footer>
-            <slot name="inside-footer"/>
-        </footer>
+        <Footer />
     </body>
 </html>
 
