@@ -9,35 +9,34 @@ import Layout from "../layouts/Layout.astro";
         <div class="vertical-line"></div>
         <section id="project-timeline">
             <section class="time-indicator left">
-                <span>07/2022 - (Current)</span>
+                <span>07/2022 - 07/2022</span>
                 <hr>
             </section>
-            <section class="project right" id="project-1-personal-site">
-                <h3>Personal Website</h3>
-                <ul>
-                    <li>
-                        Mostly static, created using Astro
-                    </li>
-                    <li>
-                        Dynamic parts are created using React.js
-                    </li>
-                </ul>
-            </section>
+            <a href="https://github.com/andyanday33/personal-site">
+                <section class="project right" id="project-1-personal-site">
+                    <h3>Personal Website</h3>
+                    <ul>
+                        <li>
+                            Mostly static, created using Astro
+                        </li>
+                        <li>
+                            Dynamic parts are created using React.js
+                        </li>
+                    </ul>
+                </section>
+            </a>
             <section class="project left"id="project-2-puzzlaffic">
                 <h3>Puzzlaffic</h3>
                 <ul>
                     <li>
-                        A coding game created using Typescript React with Redux
-                         and Firebase
+                        A solo project developed using Typescript React with Vitejs,
+                         Bootstrap React and Firebase.
                     </li>
                     <li>
-                        Currently migrating to be a full-stack Next.js app which uses tRPC
+                        Integrated with Google Blockly for drag and drop code generation.
                     </li>
                     <li>
-                        Uses Google Blockly for code generation
-                    </li>
-                    <li>
-                        Contributed to Google Blockly during the development process
+                        Contributed to Google Blockly during the development process.
                     </li>
                 </ul>
             </section>
@@ -46,26 +45,42 @@ import Layout from "../layouts/Layout.astro";
                 <span>06/2022 - (Current)</span>
             </section>
             <section class="time-indicator left">
-                <span>06/2022 - (Current)</span>
+                <span>04/2022 - 05/2022</span>
                 <hr>
             </section>
-            <section class="project left"id="project-3-food-friends">
-                <h3>Puzzlaffic</h3>
-                <ul>
-                    <li>
-                        A coding game created using Typescript React with Redux
-                         and Firebase
-                    </li>
-                    <li>
-                        Currently migrating to be a full-stack Next.js app which uses tRPC
-                    </li>
-                    <li>
-                        Uses Google Blockly for code generation
-                    </li>
-                    <li>
-                        Contributed to Google Blockly during the development process
-                    </li>
-                </ul>
+            <a href="https://github.com/andyanday33/food-friends">
+                <section class="project left"id="project-3-food-friends">
+                    <h3>Food-Friends</h3>
+                    <ul>
+                        <li>
+                            A full-stack recipe sharing application.
+                             Created as a group project of four.
+                        </li>
+                        <li>
+                            Created with Nuxt.js and Tailwind CSS on the front-end
+                             and Java Spring with MongoDB on back-end.
+                        </li>
+                    </ul>
+                </section>
+            </a>
+            <a href="https://github.com/andyanday33/numble">
+                <section class="project left"id="project-4-numble">
+                    <h3>Numble</h3>
+                    <ul>
+                        <li>
+                            A Nerdle/Wordle variation. Created
+                             as a group project of three.
+                        </li>
+                        <li>
+                            Created with Vue.js on the front-end and
+                            Java Spring on the back-end.
+                        </li>
+                    </ul>
+                </section>
+            </a>
+            <section class="time-indicator right">
+                <hr>
+                <span>02/2022 - 03/2022</span>
             </section>
         </section>
     </main>
@@ -79,6 +94,9 @@ import Layout from "../layouts/Layout.astro";
         background-color: #DCD7C9;
         overflow: visible;
         font-size: 1.1em;
+    }
+    a {
+        text-decoration: none;
     }
     h2 {
         justify-self: center;
@@ -155,7 +173,7 @@ import Layout from "../layouts/Layout.astro";
     }
     .vertical-line {
         border-left: 3px dashed #3F4E4F;
-        height: 120%;
+        height: 150%;
         position: absolute;
         left: 50%;
         margin-left: -3px;
