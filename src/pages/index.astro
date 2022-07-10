@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header';
+import Header from '../components/Header.astro';
 ---
 <Layout>
 	<!--TODO: extract this to a jsx component for animated background -->
 	<!--TODO: add responsiveness -->
-	<Header slot="before-main" client:load/>
+	<Header slot="before-main"/>
 	<!--TODO: add linkedin, github images with links here -->
 </Layout>
 

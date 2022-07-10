@@ -1,0 +1,56 @@
+---
+import ParticleContainer from "./ParticleContainer";
+---
+<header>
+    <section id="greeting">
+      <p>Hello There! I am</p>
+      <h1>Berke Anday<br /><span id="last-name">Baloglu</span></h1>
+      <p>Full-stack developer, MSc Student</p>
+    </section>
+    <ParticleContainer client:load/>
+</header>
+
+<style>
+    header h1 {
+    font-size: 4em;
+    text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
+           1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
+    color: #A27B5C;
+    max-width: fit-content;
+    padding: 2px;
+    margin: auto;
+    }
+    header {
+    box-sizing: border-box;
+    color: #2C3639;
+    margin: 0px;
+    height: 100%;
+    padding: 4em;
+    border-bottom: dotted 1px #2C3639;
+    transition: padding 1s;
+    display: flex;
+    justify-content: center;
+    z-index : 1000;
+    }
+    header section#greeting {
+    margin: auto;
+    display: grid;
+    width: 40%;
+    }
+    header section#greeting p{
+    text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
+            1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
+    color: #DCD7C9;
+    background-size: cover;
+    padding: 2px;
+    margin: 2px 0;
+    font-size: 1.5em;
+    text-align: center;
+
+    }
+    header span#last-name {
+    color: #A27B5C;
+    padding: 0px;
+    font-size: 1.5em;
+    }
+</style>
