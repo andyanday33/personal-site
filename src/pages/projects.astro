@@ -168,7 +168,8 @@ import Layout from "../layouts/Layout.astro";
         transition: background-color 0.5s;
         transition: font-size 0.5s;
     }
-    section.project:hover {
+    @media any-hover {
+        section.project:hover {
         background-color: #A27B5C;
         color: #DCD7C9;
         border-top: 3px dashed #3F4E4F;
@@ -178,6 +179,7 @@ import Layout from "../layouts/Layout.astro";
         transition: font-size 0.5s;
         text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
             1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
+    }
     }
     ul {
         list-style: none;
