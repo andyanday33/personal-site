@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+
+---
+<Layout>
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>I am Berke Anday Baloglu, A Computer Science MSc Student in University of St Andrews.
+                I am passionate about web applications, and am continously improving myself on
+                 the field.
+            </p>
+            <h3>Dream Tech Stack</h3>
+            <p>Next.js, Typescript, React, Javascript, Jest</p>
+            <h3>I Could Also Use</h3>
+            <p>Java, Vue, Nuxt, Python, Express</p>
+            <h3>Other Tools and Practices</h3>
+            <p>Git, CI, REST API, GraphQL, Docker</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <h3>University of St Andrews</h3>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    main {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto;
+        background-color: #DCD7C9;
+    }
+    h2 {
+        text-align: center;
+        color: #3F4E4F;
+        border-bottom: 1px dashed #3F4E4F;
+    }
+    h3 {
+        color: #2C3639;
+        width: fit-content;
+        border-bottom: 1px dashed #2C3639;
+    }
+    section {
+        margin: 2em;
+        padding: 2em;
+        border: 1px dashed #3F4E4F;
+    }
+</style>

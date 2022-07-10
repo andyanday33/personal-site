@@ -9,7 +9,19 @@ import Layout from "../layouts/Layout.astro";
         <section id="project-1-puzzlaffic">
             <h3>Puzzlaffic</h3>
             <ul>
-                <li>A coding game created using Typescript React</li>
+                <li>
+                    A coding game created using Typescript React with Redux
+                     and Firebase
+                </li>
+                <li>
+                    Currently migrating to be a full-stack Next.js app which uses tRPC
+                </li>
+                <li>
+                    Uses Google Blockly for code generation
+                </li>
+                <li>
+                    Contributed to Google Blockly during the development process
+                </li>
             </ul>
         </section>
     </main>
@@ -20,6 +32,13 @@ import Layout from "../layouts/Layout.astro";
         height: 100%;
         display: grid;
         grid-template-rows: 6em;
+        background-color: #DCD7C9;
+    }
+    h2 {
+        justify-self: center;
+        color: #3F4E4F;
+        width: fit-content;
+        border-bottom: 1px solid #3F4E4F;
     }
     section#project-1-puzzlaffic {
         justify-self: right;
@@ -28,6 +47,19 @@ import Layout from "../layouts/Layout.astro";
         height: fit-content;
         width: 50%;
         padding: 1em;
-        margin: 0.5em;
+        margin: .5em;
+        background-color: #3F4E4F;
+        color: #DCD7C9;
+        border: 1px dashed #DCD7C9;
+        transition: background-color 0.5s;
+    }
+    section#project-1-puzzlaffic:hover {
+        background-color: #DCD7C9;
+        color: #3F4E4F;
+        border: 1px dashed #3F4E4F;
+        transition: background-color 0.5s;
+    }
+    li {
+        list-style-type: none;
     }
 </style>
