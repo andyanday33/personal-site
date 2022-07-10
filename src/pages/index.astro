@@ -1,60 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
 ---
 <Layout>
 	<!--TODO: extract this to a jsx component for animated background -->
 	<!--TODO: add responsiveness -->
-	<header slot="before-main">
-		<section id="greeting">
-			<p>Hello There! I am</p>
-			<h1>Berke Anday<br><span id="last-name">Baloglu</span></h1>
-			<p>Full-stack developer, MSc Student</p>
-		</section>
-	</header>
+	<Header slot="before-main" client:load/>
 	<!--TODO: add linkedin, github images with links here -->
 </Layout>
 
 <style>
-	h1 {
-		font-size: 4em;
-		text-shadow: 2px 0 #DCD7C9, -2px 0 #DCD7C9, 0 2px #DCD7C9, 0 -2px #DCD7C9,
-               1px 1px #DCD7C9, -1px -1px #DCD7C9, 1px -1px #DCD7C9, -1px 1px #DCD7C9;
-		color: #A27B5C;
-		max-width: fit-content;
-		padding: 2px;
-		margin: auto;
-	}
-	header {
-		box-sizing: border-box;
-		background-image: url('../tile_background.png');
-        color: #2C3639;
-        margin: 0px;
-        height: 100%;
-        padding: 4em;
-        border-bottom: dotted 1px #2C3639;
-        transition: padding 1s;
-        display: flex;
-        justify-content: center;
-	}
-	section#greeting {
-		margin: auto;
-		display: grid;
-		width: 40%;
-	}
-	section#greeting p{
-		text-shadow: 2px 0 #A27B5C, -2px 0 #A27B5C, 0 2px #A27B5C, 0 -2px #A27B5C,
-               1px 1px #A27B5C, -1px -1px #A27B5C, 1px -1px #A27B5C, -1px 1px #A27B5C;
-		color: #DCD7C9;
-		background-size: cover;
-		padding: 2px;
-		margin: 2px 0;
-		font-size: 1.5em;
-		text-align: center;
-		
-	}
-	span#last-name {
-		color: #3F4E4F;
-		padding: 0px;
-		font-size: 1.5em;
-	}
+	
 </style>
