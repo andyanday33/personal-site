@@ -6,33 +6,78 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
     <main>
         <h2>Projects</h2>
-        <section id="project-1-puzzlaffic">
-            <h3>Puzzlaffic</h3>
-            <ul>
-                <li>
-                    A coding game created using Typescript React with Redux
-                     and Firebase
-                </li>
-                <li>
-                    Currently migrating to be a full-stack Next.js app which uses tRPC
-                </li>
-                <li>
-                    Uses Google Blockly for code generation
-                </li>
-                <li>
-                    Contributed to Google Blockly during the development process
-                </li>
-            </ul>
+        <div class="vertical-line"></div>
+        <section id="project-timeline">
+            <section class="time-indicator left">
+                <span>07/2022 - (Current)</span>
+                <hr>
+            </section>
+            <section class="project right" id="project-1-personal-site">
+                <h3>Personal Website</h3>
+                <ul>
+                    <li>
+                        Mostly static, created using Astro
+                    </li>
+                    <li>
+                        Dynamic parts are created using React.js
+                    </li>
+                </ul>
+            </section>
+            <section class="project left"id="project-2-puzzlaffic">
+                <h3>Puzzlaffic</h3>
+                <ul>
+                    <li>
+                        A coding game created using Typescript React with Redux
+                         and Firebase
+                    </li>
+                    <li>
+                        Currently migrating to be a full-stack Next.js app which uses tRPC
+                    </li>
+                    <li>
+                        Uses Google Blockly for code generation
+                    </li>
+                    <li>
+                        Contributed to Google Blockly during the development process
+                    </li>
+                </ul>
+            </section>
+            <section class="time-indicator right">
+                <hr>
+                <span>06/2022 - (Current)</span>
+            </section>
+            <section class="time-indicator left">
+                <span>06/2022 - (Current)</span>
+                <hr>
+            </section>
+            <section class="project left"id="project-3-food-friends">
+                <h3>Puzzlaffic</h3>
+                <ul>
+                    <li>
+                        A coding game created using Typescript React with Redux
+                         and Firebase
+                    </li>
+                    <li>
+                        Currently migrating to be a full-stack Next.js app which uses tRPC
+                    </li>
+                    <li>
+                        Uses Google Blockly for code generation
+                    </li>
+                    <li>
+                        Contributed to Google Blockly during the development process
+                    </li>
+                </ul>
+            </section>
         </section>
     </main>
 </Layout>
 
 <style>
     main {
-        height: 100%;
+        min-height: 100%;
         display: grid;
         grid-template-rows: 6em;
         background-color: #DCD7C9;
+        overflow: visible;
     }
     h2 {
         justify-self: center;
@@ -40,26 +85,72 @@ import Layout from "../layouts/Layout.astro";
         width: fit-content;
         border-bottom: 1px solid #3F4E4F;
     }
-    section#project-1-puzzlaffic {
-        justify-self: right;
+    
+    section#project-timeline {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2em;
+        align-items: center;
+        min-height: 100%;
+        max-width: 100%;
+    }
+    section.time-indicator {
+        flex-shrink: 0;
+        width: 100%;
+        margin: 0px;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .left {
         text-align: right;
+    }
+    .right {
+        text-align: left;
+    }
+    .time-indicator span {
+        margin: 1em;
+    }
+    .left hr {
+        border-top: 3px dashed #3F4E4F;
+        width: 100%;
+    }
+    .right hr {
+        border-top: 3px dashed #3F4E4F;
+        width: 100%;
+    }
+    section.project {
+        flex-shrink: 0;
+        justify-self: center;
         border: 1px solid black;
         height: fit-content;
-        width: 50%;
-        padding: 1em;
-        margin: .5em;
+        width: 90%;
+        padding: 2em 5%;
+        margin: 0px;
         background-color: #3F4E4F;
         color: #DCD7C9;
         border: 1px dashed #DCD7C9;
         transition: background-color 0.5s;
     }
-    section#project-1-puzzlaffic:hover {
+    section.project:hover {
         background-color: #DCD7C9;
         color: #3F4E4F;
         border: 1px dashed #3F4E4F;
         transition: background-color 0.5s;
     }
-    li {
-        list-style-type: none;
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .vertical-line {
+        border-left: 3px dashed #3F4E4F;
+        height: 95%;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 10em;
+        z-index: 0;
     }
 </style>
