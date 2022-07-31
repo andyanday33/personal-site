@@ -30,7 +30,7 @@ const ParticleContainer = () => {
         options={{
           background: {
             color: {
-              value: '#ffffff',
+              value: '#000000',
             },
             image: 'url("./tile_background.png")',
             position: '50% 50%',
@@ -40,7 +40,7 @@ const ParticleContainer = () => {
           backgroundMask: {
             cover: {
               color: {
-                value: '#DCD7C9',
+                value: '#3F4E4F',
               },
             },
             enable: true,
