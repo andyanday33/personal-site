@@ -41,13 +41,8 @@ const {projectName, projectDescription, projectLink, alignment,
         section.project:hover {
         background-color: #A27B5C;
         color: #DCD7C9;
-        border-top: 3px dashed #3F4E4F;
-        border-bottom: 3px dashed #3F4E4F;
         transition: background-color 0.5s;
-        transition: color 0.5s;
-        text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
-            1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
-    }
+        }
     }
     ul {
         list-style: none;
@@ -55,6 +50,8 @@ const {projectName, projectDescription, projectLink, alignment,
     }
     section.project {
         flex-shrink: 0;
+        text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
+            1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
         justify-self: center;
         border: 1px solid black;
         height: fit-content;
@@ -66,7 +63,6 @@ const {projectName, projectDescription, projectLink, alignment,
         border-top: 3px dashed #DCD7C9;
         border-bottom: 3px dashed #DCD7C9;
         transition: background-color 0.5s;
-        transition: font-size 0.5s;
     }
     a {
         text-decoration: none;
