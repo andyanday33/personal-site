@@ -1,0 +1,58 @@
+{
+  "projects": [
+    {
+      "projectName": "Puzzlaffic",
+      "projectLink": "mscthesis-andyanday33.vercel.app",
+      "projectId": 1,
+      "projectDescription": [
+        "A solo project developed using Typescript React with Vitejs, Bootstrap React and Firebase.",
+        "Integrated with Google Blockly for drag and drop code generation.",
+        "Contributed to Google Blockly during the development process."
+      ],
+      "startDate": "06/2022",
+      "endDate": "08/2022"
+    },
+    {
+      "projectName": "Personal Website",
+      "projectLink": "https://github.com/andyanday33/personal-site",
+      "projectId": 2,
+      "projectDescription": [
+        "Created using Astro and React, mostly static, accessible and SEO optimized."
+      ],
+      "startDate": "07/2022",
+      "endDate": "08/2022"
+    },
+    {
+      "projectName": "E-Commerce Application",
+      "projectLink": "https://github.com/andyanday33/e-commerce-app",
+      "projectId": 3,
+      "projectDescription": [
+        "Created using Typescript, Next.js, Redux and .Net"
+      ],
+      "startDate": "07/2022",
+      "endDate": "(Current)"
+    },
+    {
+      "projectName": "Food-Friends, Recipe Sharing Website",
+      "projectLink": "https://github.com/andyanday33/food-friends",
+      "projectId": 4,
+      "projectDescription": [
+        "A full-stack recipe sharing application. Created as a group project of four.",
+        "Created with Nuxt.js and Tailwind CSS on the front-end and Java Spring with MongoDB on back-end."
+      ],
+      "startDate": "04/2022",
+      "endDate": "05/2022"
+    },
+    {
+      "projectName": "Numble, a Nerdle Variation",
+      "projectLink": "https://github.com/andyanday33/numble",
+      "projectId": 5,
+      "projectDescription": [
+        "A Nerdle/Wordle variation. Created as a group project of three.",
+        "Created with Vue.js on the front-end and Java Spring on the back-end."
+      ],
+      "startDate": "02/2022",
+      "endDate": "03/2022"
+    }
+  ]
+}

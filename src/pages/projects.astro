@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-
+import Project from "../components/Project.astro";
+import projectData from "../data/projects.json";
 ---
 <Layout>
     <meta slot="inside-head" name="description" 
@@ -11,96 +11,12 @@ import Layout from "../layouts/Layout.astro";
         <h2>Projects</h2>
         <div class="vertical-line"></div>
         <section id="project-timeline">
-            <a href="https://mscthesis-andyanday33.vercel.app">
-                <section class="project left"id="project-3-puzzlaffic">
-                    <h3>Puzzlaffic</h3>
-                    <ul>
-                        <li>
-                            A solo project developed using Typescript React with Vitejs,
-                             Bootstrap React and Firebase.
-                        </li>
-                        <li>
-                            Integrated with Google Blockly for drag and drop code generation.
-                        </li>
-                        <li>
-                            Contributed to Google Blockly during the development process.
-                        </li>
-                    </ul>
-                </section>
-            </a>
-            <section class="time-indicator right">
-                <hr>
-                <span>06/2022 - 08/2022</span>
-            </section>
-            <section class="time-indicator left">
-                <span>07/2022 - (Current)</span>
-                <hr>                
-            </section>
-            <a href="https://github.com/andyanday33/e-commerce-app">
-                <section class="project right" id="project-5-e-commerce">
-                    <h3>E-Commerce Application</h3>
-                    <ul>
-                        <li>
-                            Created using Typescript, Next.js, Redux and .Net
-                        </li>
-                    </ul>
-                </section>
-            </a>
-            <a href="https://github.com/andyanday33/personal-site">
-                <section class="project left" id="project-4-personal-site">
-                    <h3>Personal Website</h3>
-                    <ul>
-                        <li>
-                            Mostly static, created using Astro
-                        </li>
-                        <li>
-                            Dynamic parts are created using React.js
-                        </li>
-                    </ul>
-                </section>
-            </a>
-            <section class="time-indicator right">
-                <hr>
-                <span>07/2022 - 07/2022</span>
-            </section>
-            <section class="time-indicator left">
-                <span>04/2022 - 05/2022</span>
-                <hr>
-            </section>
-            <a href="https://github.com/andyanday33/food-friends">
-                <section class="project left"id="project-2-food-friends">
-                    <h3>Food-Friends</h3>
-                    <ul>
-                        <li>
-                            A full-stack recipe sharing application.
-                             Created as a group project of four.
-                        </li>
-                        <li>
-                            Created with Nuxt.js and Tailwind CSS on the front-end
-                             and Java Spring with MongoDB on back-end.
-                        </li>
-                    </ul>
-                </section>
-            </a>
-            <a href="https://github.com/andyanday33/numble">
-                <section class="project left"id="project-1-numble">
-                    <h3>Numble</h3>
-                    <ul>
-                        <li>
-                            A Nerdle/Wordle variation. Created
-                             as a group project of three.
-                        </li>
-                        <li>
-                            Created with Vue.js on the front-end and
-                            Java Spring on the back-end.
-                        </li>
-                    </ul>
-                </section>
-            </a>
-            <section class="time-indicator right">
-                <hr>
-                <span>02/2022 - 03/2022</span>
-            </section>
+            {projectData.projects.map((proj, i) => {
+                const alignment = i % 2 == 0 ? "left" : "right";
+                return (
+                    <Project alignment={alignment} {...proj}/>
+                );
+            })}
         </section>
     </main>
 </Layout>
@@ -126,9 +42,6 @@ import Layout from "../layouts/Layout.astro";
         overflow: visible;
         font-size: calc((.1em + .5vmin) + (.1em + .5vmax));
     }
-    a {
-        text-decoration: none;
-    }
     h2 {
         justify-self: center;
         color: #3F4E4F;
@@ -145,64 +58,11 @@ import Layout from "../layouts/Layout.astro";
         max-width: 100%;
         padding-bottom: 5%;
     }
-    section.time-indicator {
-        flex-shrink: 0;
-        width: 100%;
-        margin: 0px;
-        justify-self: center;
-        justify-content: center;
-        align-items: center;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
     .left {
         text-align: right;
     }
     .right {
         text-align: left;
-    }
-    .time-indicator span {
-        margin: 1em;
-    }
-    .left hr {
-        border-top: 3px dashed #3F4E4F;
-        width: 100%;
-    }
-    .right hr {
-        border-top: 3px dashed #3F4E4F;
-        width: 100%;
-    }
-    section.project {
-        flex-shrink: 0;
-        justify-self: center;
-        border: 1px solid black;
-        height: fit-content;
-        width: 90%;
-        padding: 2em 5%;
-        margin: 0px;
-        background-color: #3F4E4F;
-        color: #DCD7C9;
-        border-top: 3px dashed #DCD7C9;
-        border-bottom: 3px dashed #DCD7C9;
-        transition: background-color 0.5s;
-        transition: font-size 0.5s;
-    }
-    @media (hover: hover) {
-        section.project:hover {
-        background-color: #A27B5C;
-        color: #DCD7C9;
-        border-top: 3px dashed #3F4E4F;
-        border-bottom: 3px dashed #3F4E4F;
-        font-size: calc((.1em + .75vmin) + (.1em + .75vmax));
-        transition: background-color 0.5s;
-        transition: font-size 0.5s;
-        text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
-            1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
-    }
-    }
-    ul {
-        list-style: none;
-        padding-left: 0;
     }
     .vertical-line {
         border-left: 3px dashed #3F4E4F;

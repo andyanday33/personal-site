@@ -1,0 +1,39 @@
+---
+export interface Props {
+    alignment: string,
+    startDate: string,
+    endDate: string,
+}
+
+const {alignment, startDate, endDate} = Astro.props as Props;
+---
+<section class={`time-indicator ${alignment}`}>
+    {alignment === "right" && <hr/>}
+    <span>{startDate} - {endDate}</span>
+    {alignment === "left" && <hr/>}
+</section>
+<style>
+    .left {
+        text-align: right;
+    }
+    .right {
+        text-align: left;
+    }
+    section.time-indicator {
+        flex-shrink: 0;
+        width: 100%;
+        margin: 0px;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .time-indicator span {
+        margin: 1em;
+    }
+    hr {
+        border-top: 3px dashed #3F4E4F;
+        width: 100%;
+    }
+</style>
