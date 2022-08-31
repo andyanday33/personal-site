@@ -9,8 +9,8 @@ import projectData from "../data/projects.json";
 		 website. Consists of a timeline and previous projects developed."/>
     <main>
         <h2>Projects</h2>
-        <div class="vertical-line"></div>
         <section id="project-timeline">
+            <div class="vertical-line"></div>
             {projectData.projects.map((proj, i) => {
                 const alignment = i % 2 == 0 ? "left" : "right";
                 return (
@@ -21,18 +21,6 @@ import projectData from "../data/projects.json";
     </main>
 </Layout>
 <style>
-    @media all and (max-width: 1000px) {
-        .vertical-line {
-            height: 105%;
-            top: 12em;
-        }
-    }
-    @media all and (min-width: 1000px) {
-        .vertical-line {
-            height: 120%;
-            top: 9em;
-        }
-    }
     main {
         min-height: 100%;
         display: grid;
@@ -49,7 +37,7 @@ import projectData from "../data/projects.json";
     }
     section#project-timeline {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr fit-content(10px) 1fr;
         row-gap: 2em;
         align-items: center;
         min-height: 100%;
@@ -58,10 +46,9 @@ import projectData from "../data/projects.json";
     }
     .vertical-line {
         border-left: 3px dashed #3F4E4F;
-        position: absolute;
-        left: 50%;
-        margin-left: -3px;
-        z-index: 0;
+        grid-column: 2;
+        height: 100%;
+        grid-row: 1/span 6;
     }
     
 </style>
