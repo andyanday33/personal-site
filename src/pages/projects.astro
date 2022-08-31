@@ -24,7 +24,7 @@ import projectData from "../data/projects.json";
     main {
         min-height: 100%;
         display: grid;
-        grid-template-rows: 6em;
+        grid-template-rows: 4em;
         background-color: #DCD7C9;
         overflow: visible;
         font-size: calc((.1em + .5vmin) + (.1em + .5vmax));
@@ -33,12 +33,13 @@ import projectData from "../data/projects.json";
         justify-self: center;
         color: #3F4E4F;
         width: fit-content;
-        border-bottom: 1px solid #3F4E4F;
+        border-bottom: 3px dashed #3F4E4F;
+        margin-bottom: 0px;
     }
     section#project-timeline {
         display: grid;
         grid-template-columns: 1fr fit-content(10px) 1fr;
-        row-gap: 2em;
+        row-gap: 2rem;
         align-items: center;
         min-height: 100%;
         max-width: 100%;
@@ -50,5 +51,4 @@ import projectData from "../data/projects.json";
         height: 100%;
         grid-row: 1/span 6;
     }
-    
 </style>
