@@ -8,6 +8,7 @@ const posts = await Astro.glob('./*.md');
             return (
                 <a href={post.url} class={i % 2 === 0 ? "primary" : "secondary"}>
                     <section title={post.frontmatter.title}>
+                        {/* TODO: Consider adding images */}
                         <h2>{post.frontmatter.title}</h2>
                         <p>{post.frontmatter.description}</p>
                     </section>
