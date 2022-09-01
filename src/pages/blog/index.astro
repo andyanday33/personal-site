@@ -3,5 +3,43 @@ import Layout from '../../layouts/Layout.astro';
 const posts = await Astro.glob('./*.md');
 ---
 <Layout>
-    <h1>Bum</h1>
+    <main>
+        {posts.map(post => {
+            return (
+                <a href={post.url}>
+                    <section title={post.frontmatter.title}>
+                        <h2>{post.frontmatter.title}</h2>
+                        <p>{post.frontmatter.description}</p>
+                    </section>
+                </a>
+            );
+        })}
+    </main>
 </Layout>
+<style>
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        background-color: #DCD7C9;
+        min-height: 100%;
+    }
+    section {
+        border: 3px dashed #2C3639;
+        margin: 2em;
+        padding: 2em 0 0 2em;
+        max-height: 20%;
+    }
+
+    @media (max-width: 1000px) {
+        section {
+            width: 90%;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        section {
+            width: 50%;
+        }
+    }
+</style>
