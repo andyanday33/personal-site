@@ -4,9 +4,9 @@ const posts = await Astro.glob('./*.md');
 ---
 <Layout>
     <main>
-        {posts.map(post => {
+        {posts.map((post, i) => {
             return (
-                <a href={post.url}>
+                <a href={post.url} class={i % 2 === 0 ? "primary" : "secondary"}>
                     <section title={post.frontmatter.title}>
                         <h2>{post.frontmatter.title}</h2>
                         <p>{post.frontmatter.description}</p>
@@ -26,19 +26,34 @@ const posts = await Astro.glob('./*.md');
     }
     a {
         text-decoration: none;
-        color: #2C3639;
         min-height: 20%;
         margin: 2em;
         padding: 2em 0 0 2em;
-        border: 3px dashed #2C3639;
         transition: background-color, color, border, 0.5s;
+    }
+    .primary {
+        text-shadow: 2px 0 #DCD7C9, -2px 0 #DCD7C9, 0 2px #DCD7C9, 0 -2px #DCD7C9,
+            1px 1px #DCD7C9, -1px -1px #DCD7C9, 1px -1px #DCD7C9, -1px 1px #DCD7C9;
+        border: 3px dashed #2C3639;
+        color: #2C3639;
+    }
+    .secondary {
+        text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
+            1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
+        border: 3px dashed #DCD7C9;
+        background-color: #2C3639;
+        color: #DCD7C9;
     }
     @media (hover) {
         a:hover {
-            background-color: #2C3639;
+            transition: background-color, color, border, 0.5s;
+            background-color: #A27B5C;
             color: #DCD7C9;
             border: 3px dashed #DCD7C9;
-            transition: background-color, color, border, 0.5s;
+        }
+        .primary:hover {
+            text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
+            1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
         }
     }
     @media (max-width: 1000px) {
