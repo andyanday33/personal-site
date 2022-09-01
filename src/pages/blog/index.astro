@@ -24,21 +24,31 @@ const posts = await Astro.glob('./*.md');
         background-color: #DCD7C9;
         min-height: 100%;
     }
-    section {
-        border: 3px dashed #2C3639;
+    a {
+        text-decoration: none;
+        color: #2C3639;
+        max-height: 20%;
         margin: 2em;
         padding: 2em 0 0 2em;
-        max-height: 20%;
+        border: 3px dashed #2C3639;
+        transition: background-color, color, border, 0.5s;
     }
-
+    @media (hover) {
+        a:hover {
+            background-color: #2C3639;
+            color: #DCD7C9;
+            border: 3px dashed #DCD7C9;
+            transition: background-color, color, border, 0.5s;
+        }
+    }
     @media (max-width: 1000px) {
-        section {
+        a {
             width: 90%;
         }
     }
 
     @media (min-width: 1000px) {
-        section {
+        a {
             width: 50%;
         }
     }
