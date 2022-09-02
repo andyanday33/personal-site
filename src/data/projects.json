@@ -5,8 +5,8 @@
       "projectLink": "https://github.com/andyanday33/hotel-booking",
       "projectId": 0,
       "projectDescription": [
-        "A full-stack application created using Typescript, Next.js and Prisma.",
-        "tRPC, Redux, and Stripe is going to be added soon."
+        "A full-stack application created using Typescript, Next.js, tRPC and Prisma.",
+        "Redux and Stripe is going to be added soon."
       ],
       "startDate": "08/2022",
       "endDate": "(Current)"
