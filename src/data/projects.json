@@ -34,6 +34,17 @@
       "endDate": "08/2022"
     },
     {
+      "projectName": "Food-Friends, Recipe Sharing Website",
+      "projectLink": "https://github.com/andyanday33/food-friends",
+      "projectId": 4,
+      "projectDescription": [
+        "A full-stack recipe sharing application. Created as a group project of four.",
+        "Created with Nuxt.js and Tailwind CSS on the front-end and Java Spring with MongoDB on back-end."
+      ],
+      "startDate": "04/2022",
+      "endDate": "05/2022"
+    },
+    {
       "projectName": "Numble, a Nerdle Variation",
       "projectLink": "https://github.com/andyanday33/numble",
       "projectId": 5,
