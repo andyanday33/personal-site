@@ -10,6 +10,7 @@ const posts = await Astro.glob('./*.md');
                     <section title={post.frontmatter.title}>
                         {/* TODO: Consider adding images */}
                         <h2>{post.frontmatter.title}</h2>
+                        <p class="date">{post.frontmatter.date}</p>
                         <p>{post.frontmatter.description}</p>
                     </section>
                 </a>
@@ -31,6 +32,24 @@ const posts = await Astro.glob('./*.md');
         margin: 2em;
         padding: 2em 0 0 2em;
         transition: background-color, color, border, 0.5s;
+    }
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .date {
+        font-size: smaller;
+        text-align: right;
+        padding-right: 2em;
+    }
+    .primary h2{
+        padding-bottom: 0.25em;
+        border-bottom: 3px dashed #2C3639;
+    }
+    .secondary h2 {
+        padding-bottom: 0.25em;
+        border-bottom: 3px dashed #DCD7C9;
     }
     .primary {
         text-shadow: 2px 0 #DCD7C9, -2px 0 #DCD7C9, 0 2px #DCD7C9, 0 -2px #DCD7C9,
