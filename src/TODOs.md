@@ -1,0 +1,3 @@
+- Remove unfinished projects.
+- Fix about me page font sizing.
+- More images for projects page.
