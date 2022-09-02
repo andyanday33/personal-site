@@ -9,9 +9,11 @@ const posts = await Astro.glob('./*.md');
                 <a href={post.url} class={i % 2 === 0 ? "primary" : "secondary"}>
                     <section title={post.frontmatter.title}>
                         {/* TODO: Consider adding images */}
-                        <h2>{post.frontmatter.title}</h2>
-                        <p class="date">{post.frontmatter.date}</p>
-                        <p>{post.frontmatter.description}</p>
+                        <section title="post-header" class="post-header">
+                            <h2>{post.frontmatter.title}</h2>
+                            <span class="date">{post.frontmatter.date}</span>
+                        </section>
+                        <p class="post-content">{post.frontmatter.description}</p>
                     </section>
                 </a>
             );
@@ -29,27 +31,29 @@ const posts = await Astro.glob('./*.md');
     a {
         text-decoration: none;
         min-height: 20%;
-        margin: 2em;
-        padding: 2em 0 0 2em;
+        margin-top: 2em;
+        padding: 2em 2em 1em 2em;
         transition: background-color, color, border, 0.5s;
     }
-    section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .post-header {
+        display: flex;
         align-items: center;
+    }
+    .post-content {
+        margin-top: 0em;
+        padding-top: 1em;
+    }
+    .primary .post-content {
+        border-top: 3px dashed #2C3639;
+    }
+    .secondary .post-content {
+        border-top: 3px dashed #DCD7C9;
     }
     .date {
         font-size: smaller;
         text-align: right;
+        margin-left: auto;
         padding-right: 2em;
-    }
-    .primary h2{
-        padding-bottom: 0.25em;
-        border-bottom: 3px dashed #2C3639;
-    }
-    .secondary h2 {
-        padding-bottom: 0.25em;
-        border-bottom: 3px dashed #DCD7C9;
     }
     .primary {
         text-shadow: 2px 0 #DCD7C9, -2px 0 #DCD7C9, 0 2px #DCD7C9, 0 -2px #DCD7C9,
@@ -74,6 +78,10 @@ const posts = await Astro.glob('./*.md');
         .primary:hover {
             text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
             1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
+        }
+        .primary:hover .post-content {
+            border-top: 3px dashed #DCD7C9;
+            transition: border 0.5s;
         }
     }
     @media (max-width: 1000px) {
