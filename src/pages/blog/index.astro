@@ -1,98 +1,101 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-const posts = await Astro.glob('./*.md');
+import Layout from "../../layouts/Layout.astro";
+const posts = await Astro.glob("./*.md");
 ---
+
 <Layout>
-    <main>
-        {posts.map((post, i) => {
-            return (
-                <a href={post.url} class={i % 2 === 0 ? "primary" : "secondary"}>
-                    <section title={post.frontmatter.title}>
-                        {/* TODO: Consider adding images */}
-                        <section title="post-header" class="post-header">
-                            <h2>{post.frontmatter.title}</h2>
-                            <span class="date">{post.frontmatter.date}</span>
-                        </section>
-                        <p class="post-content">{post.frontmatter.description}</p>
-                    </section>
-                </a>
-            );
-        })}
-    </main>
+  <main>
+    {
+      posts.map((post, i) => {
+        return (
+          <a href={post.url} class={i % 2 === 0 ? "primary" : "secondary"}>
+            <section title={post.frontmatter.title}>
+              {/* TODO: Consider adding images */}
+              <section title="post-header" class="post-header">
+                <h2>{post.frontmatter.title}</h2>
+                <span class="date">{post.frontmatter.date}</span>
+              </section>
+              <p class="post-content">{post.frontmatter.description}</p>
+            </section>
+          </a>
+        );
+      })
+    }
+  </main>
 </Layout>
 <style>
-    main {
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-items: center;
-        background-color: #DCD7C9;
-        min-height: 100%;
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    background-color: #dcd7c9;
+    min-height: 100%;
+  }
+  a {
+    text-decoration: none;
+    min-height: 20%;
+    margin-top: 2em;
+    padding: 2em 2em 1em 2em;
+    transition: background-color, color, border, 0.5s;
+  }
+  .post-header {
+    display: flex;
+    align-items: center;
+  }
+  .post-content {
+    margin-top: 0em;
+    padding-top: 1em;
+  }
+  .primary .post-content {
+    border-top: 3px dashed #2c3639;
+  }
+  .secondary .post-content {
+    border-top: 3px dashed #dcd7c9;
+  }
+  .date {
+    font-size: smaller;
+    text-align: right;
+    margin-left: auto;
+    padding-right: 2em;
+  }
+  .primary {
+    text-shadow: 2px 0 #dcd7c9, -2px 0 #dcd7c9, 0 2px #dcd7c9, 0 -2px #dcd7c9,
+      1px 1px #dcd7c9, -1px -1px #dcd7c9, 1px -1px #dcd7c9, -1px 1px #dcd7c9;
+    border: 3px dashed #2c3639;
+    color: #2c3639;
+  }
+  .secondary {
+    text-shadow: 2px 0 #2c3639, -2px 0 #2c3639, 0 2px #2c3639, 0 -2px #2c3639,
+      1px 1px #2c3639, -1px -1px #2c3639, 1px -1px #2c3639, -1px 1px #2c3639;
+    border: 3px dashed #dcd7c9;
+    background-color: #2c3639;
+    color: #dcd7c9;
+  }
+  @media (hover) {
+    a:hover {
+      transition: background-color, color, border, 0.5s;
+      background-color: #a27b5c;
+      color: #dcd7c9;
+      border: 3px dashed #dcd7c9;
     }
+    .primary:hover {
+      text-shadow: 2px 0 #2c3639, -2px 0 #2c3639, 0 2px #2c3639, 0 -2px #2c3639,
+        1px 1px #2c3639, -1px -1px #2c3639, 1px -1px #2c3639, -1px 1px #2c3639;
+    }
+    .primary:hover .post-content {
+      border-top: 3px dashed #dcd7c9;
+      transition: border 0.5s;
+    }
+  }
+  @media (max-width: 1000px) {
     a {
-        text-decoration: none;
-        min-height: 20%;
-        margin-top: 2em;
-        padding: 2em 2em 1em 2em;
-        transition: background-color, color, border, 0.5s;
+      width: 90%;
     }
-    .post-header {
-        display: flex;
-        align-items: center;
-    }
-    .post-content {
-        margin-top: 0em;
-        padding-top: 1em;
-    }
-    .primary .post-content {
-        border-top: 3px dashed #2C3639;
-    }
-    .secondary .post-content {
-        border-top: 3px dashed #DCD7C9;
-    }
-    .date {
-        font-size: smaller;
-        text-align: right;
-        margin-left: auto;
-        padding-right: 2em;
-    }
-    .primary {
-        text-shadow: 2px 0 #DCD7C9, -2px 0 #DCD7C9, 0 2px #DCD7C9, 0 -2px #DCD7C9,
-            1px 1px #DCD7C9, -1px -1px #DCD7C9, 1px -1px #DCD7C9, -1px 1px #DCD7C9;
-        border: 3px dashed #2C3639;
-        color: #2C3639;
-    }
-    .secondary {
-        text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
-            1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
-        border: 3px dashed #DCD7C9;
-        background-color: #2C3639;
-        color: #DCD7C9;
-    }
-    @media (hover) {
-        a:hover {
-            transition: background-color, color, border, 0.5s;
-            background-color: #A27B5C;
-            color: #DCD7C9;
-            border: 3px dashed #DCD7C9;
-        }
-        .primary:hover {
-            text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
-            1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
-        }
-        .primary:hover .post-content {
-            border-top: 3px dashed #DCD7C9;
-            transition: border 0.5s;
-        }
-    }
-    @media (max-width: 1000px) {
-        a {
-            width: 90%;
-        }
-    }
+  }
 
-    @media (min-width: 1000px) {
-        a {
-            width: 50%;
-        }
+  @media (min-width: 1000px) {
+    a {
+      width: 50%;
     }
+  }
 </style>

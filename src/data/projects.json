@@ -2,7 +2,7 @@
   "projects": [
     {
       "projectName": "Hotel and Room booking application",
-      "projectLink": "https://github.com/andyanday33/hotel-booking",
+      "projectLink": "/projects/book-it",
       "projectId": 0,
       "projectDescription": [
         "A full-stack application created using Typescript, Next.js and Prisma.",
