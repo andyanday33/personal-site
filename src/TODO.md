@@ -1,0 +1,2 @@
+- Layout for blog posts
+- Project descriptions with screenshots (projects/\*.md routes)

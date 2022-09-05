@@ -1,6 +1,37 @@
 ---
 import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
 ---
 <Layout>
-    <slot />
+    <main>
+        <section class="blog-container">
+                <h2>{frontmatter.title}</h2>
+                <p id="date">{frontmatter.date}</p>
+            <slot />
+        </section>
+    </main>
 </Layout>
+
+<style>
+    main {
+        padding: 2rem 4rem;
+        background-color: #DCD7C9;
+    }
+
+    .blog-container {
+        color: #DCD7C9;
+        border: 3px dashed  #DCD7C9;
+        background-color: #3F4E4F;
+        padding: 2rem;
+    }
+
+    h2 {
+        margin: 0px;
+    }
+
+    #date {
+        margin-top: 1rem;
+        font-size: 0.8em;
+    }
+
+</style>
