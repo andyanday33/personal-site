@@ -1,2 +1,3 @@
 - Layout for blog posts
 - Project descriptions with screenshots (projects/\*.md routes)
+- Project needs a backend to store blog data.

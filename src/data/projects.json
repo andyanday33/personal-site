@@ -2,7 +2,8 @@
   "projects": [
     {
       "projectName": "Hotel and Room booking application",
-      "projectLink": "/projects/book-it",
+      "projectLink": "https://github.com/andyanday33/hotel-booking",
+      "projectRoute": "/projects/book-it",
       "projectId": 0,
       "projectDescription": [
         "A full-stack application created using Typescript, Next.js and Prisma.",
@@ -14,6 +15,7 @@
     {
       "projectName": "Puzzlaffic",
       "projectLink": "mscthesis-andyanday33.vercel.app",
+      "projectRoute": "/projects/puzzlaffic",
       "projectId": 1,
       "projectDescription": [
         "A solo project developed using Typescript React with Vitejs, Bootstrap React and Firebase.",
@@ -26,6 +28,7 @@
     {
       "projectName": "Personal Website",
       "projectLink": "https://github.com/andyanday33/personal-site",
+      "projectRoute": "/projects/personal-website",
       "projectId": 2,
       "projectDescription": [
         "Created using Astro and React, mostly static, accessible and SEO optimized."
@@ -34,18 +37,9 @@
       "endDate": "08/2022"
     },
     {
-      "projectName": "E-Commerce Application",
-      "projectLink": "https://github.com/andyanday33/e-commerce-app",
-      "projectId": 3,
-      "projectDescription": [
-        "Created using Typescript, Next.js, Redux and .Net"
-      ],
-      "startDate": "07/2022",
-      "endDate": "(Current)"
-    },
-    {
       "projectName": "Food-Friends, Recipe Sharing Website",
       "projectLink": "https://github.com/andyanday33/food-friends",
+      "projectRoute": "/projects/food-friends",
       "projectId": 4,
       "projectDescription": [
         "A full-stack recipe sharing application. Created as a group project of four.",
@@ -57,6 +51,7 @@
     {
       "projectName": "Numble, a Nerdle Variation",
       "projectLink": "https://github.com/andyanday33/numble",
+      "projectRoute": "/projects/numble",
       "projectId": 5,
       "projectDescription": [
         "A Nerdle/Wordle variation. Created as a group project of three.",

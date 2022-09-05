@@ -2,69 +2,83 @@
 import TimeIndicator from "./TimeIndicator.astro";
 
 export interface Props {
-    projectName: string,
-    projectDescription: string[],
-    projectLink: string,
-    alignment: string,
-    projectId: number,
-    startDate: string,
-    endDate: string,
+  projectName: string;
+  projectDescription: string[];
+  projectLink: string;
+  alignment: string;
+  projectId: number;
+  startDate: string;
+  endDate: string;
 }
-const {projectName, projectDescription, projectLink, alignment,
-    projectId, startDate, endDate} = Astro.props as Props;
+const {
+  projectName,
+  projectDescription,
+  alignment,
+  projectLink,
+  projectId,
+  startDate,
+  endDate,
+} = Astro.props as Props;
 ---
-{alignment === "right" && 
-    <TimeIndicator alignment="left" startDate={startDate} endDate={endDate}/>}
+
+{
+  alignment === "right" && (
+    <TimeIndicator alignment="left" startDate={startDate} endDate={endDate} />
+  )
+}
 <a href={projectLink}>
-    <section class={`project ${alignment}`} id={`${projectId}`}>
-        <h3>{projectName}</h3>
-        <ul>
-            {projectDescription.map((desc: String) => {
-                return (
-                    <li>{desc}</li>
-                )
-            })}
-        </ul>
-    </section>
+  <section class={`project ${alignment}`} id={`${projectId}`}>
+    <h3>{projectName}</h3>
+    <ul>
+      {
+        projectDescription.map((desc: String) => {
+          return <li>{desc}</li>;
+        })
+      }
+    </ul>
+  </section>
 </a>
-{alignment === "left" && 
-    <TimeIndicator alignment="right" startDate={startDate} endDate={endDate}/>}
+{
+  alignment === "left" && (
+    <TimeIndicator alignment="right" startDate={startDate} endDate={endDate} />
+  )
+}
 
 <style>
-    .left {
-        text-align: right;
+  .left {
+    text-align: right;
+  }
+  .right {
+    text-align: left;
+  }
+  @media (hover) {
+    section.project:hover {
+      background-color: #a27b5c;
+      color: #dcd7c9;
+      transition: background-color 0.5s;
     }
-    .right {
-        text-align: left;
-    }
-    @media (hover) {
-        section.project:hover {
-        background-color: #A27B5C;
-        color: #DCD7C9;
-        transition: background-color 0.5s;
-        }
-    }
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
-    section.project {
-        flex-shrink: 0;
-        text-shadow: 2px 0 #2C3639, -2px 0 #2C3639, 0 2px #2C3639, 0 -2px #2C3639,
-            1px 1px #2C3639, -1px -1px #2C3639, 1px -1px #2C3639, -1px 1px #2C3639;
-        justify-self: center;
-        border: 1px solid black;
-        height: fit-content;
-        width: 90%;
-        padding: 2em 5%;
-        margin: 0px;
-        background-color: #3F4E4F;
-        color: #DCD7C9;
-        border-top: 3px dashed #DCD7C9;
-        border-bottom: 3px dashed #DCD7C9;
-        transition: background-color 0.5s;
-    }
-    a {
-        text-decoration: none;
-    }
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  section.project {
+    flex-shrink: 0;
+    text-shadow: 2px 0 #2c3639, -2px 0 #2c3639, 0 2px #2c3639, 0 -2px #2c3639,
+      1px 1px #2c3639, -1px -1px #2c3639, 1px -1px #2c3639, -1px 1px #2c3639;
+    justify-self: center;
+    border: 1px solid black;
+    height: fit-content;
+    width: 90%;
+    padding: 2em 5%;
+    margin: 0px;
+    background-color: #3f4e4f;
+    color: #dcd7c9;
+    border-top: 3px dashed #dcd7c9;
+    border-bottom: 3px dashed #dcd7c9;
+    transition: background-color 0.5s;
+  }
+  a {
+    text-decoration: none;
+  }
 </style>
