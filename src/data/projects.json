@@ -7,10 +7,10 @@
       "projectDescription": [
         "Full-stack next.js hotel booking application.",
         "Uses Prisma orm connected to a planet-scale MySQL instance.",
-        "Includes end-to-end type safety provided by tRPC.",
+        "Contains end-to-end type safety provided by tRPC.",
         "Uses Tailwind CSS with DaisyUI component library for styling.",
         "Uses Next-auth connected to Prisma for authorization which creates an OAuth flow.",
-        "Stripe is going to be implemented in the future for payments."
+        "Stripe is going to be integrated in the future for payments."
       ],
       "startDate": "08/2022",
       "endDate": "(Current)"
