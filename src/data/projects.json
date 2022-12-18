@@ -5,8 +5,12 @@
       "projectLink": "https://github.com/andyanday33/hotel-booking",
       "projectId": 0,
       "projectDescription": [
-        "A full-stack application created using Typescript, Next.js, tRPC and Prisma.",
-        "Redux and Stripe is going to be added soon."
+        "Full-stack next.js hotel booking application.",
+        "Uses Prisma orm connected to a planet-scale MySQL instance.",
+        "Contains end-to-end type safety provided by tRPC.",
+        "Uses Tailwind CSS with DaisyUI component library for styling.",
+        "Uses Next-auth connected to Prisma for authorization which creates an OAuth flow.",
+        "Stripe is going to be integrated in the future for payments."
       ],
       "startDate": "08/2022",
       "endDate": "(Current)"
