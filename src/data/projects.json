@@ -1,6 +1,16 @@
 {
   "projects": [
     {
+      "projectName": "ESporland - Esports news website Side-Project",
+      "projectId": 0,
+      "projectDescription": [
+        "Tested various technologies (like Next.js, Astro for frontend and WordPress, and Strapi as headless content management systems) measuring trade-of s and trying to provide the best writing experience for reporters.",
+        "Created the website using Astro on the front-end with SSR (Server Side Rendering) enabled, which queries WordPress on the backend using GraphQL, reducing the response payload that is being sent to the front-end, therefore, boosting performance."
+      ],
+      "startDate": "12/2022",
+      "endDate": "(Current)"
+    },
+    {
       "projectName": "Hotel and Room booking application",
       "projectLink": "https://github.com/andyanday33/hotel-booking",
       "projectId": 0,
