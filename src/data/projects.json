@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "projectName": "ESporland - Esports news website Side-Project",
+      "projectName": "ESporland - Esports news website",
       "projectId": 0,
       "projectDescription": [
         "Tested various technologies (like Next.js, Astro for frontend and WordPress, and Strapi as headless content management systems) measuring trade-of s and trying to provide the best writing experience for reporters.",
