@@ -2,13 +2,13 @@
 import TimeIndicator from "./TimeIndicator.astro";
 
 export interface Props {
-    projectName: string,
-    projectDescription: string[],
-    projectLink: string,
+    projectName?: string,
+    projectDescription?: string[],
+    projectLink?: string,
     alignment: string,
-    projectId: number,
-    startDate: string,
-    endDate: string,
+    projectId?: number,
+    startDate?: string,
+    endDate?: string,
 }
 const {projectName, projectDescription, projectLink, alignment,
     projectId, startDate, endDate} = Astro.props as Props;
